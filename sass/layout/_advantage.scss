@@ -1,0 +1,24 @@
+.advantage__item:not(:last-child){
+	margin-right: 30px;
+}
+.advantage {
+	display: flex;
+}
+.advantage__title {
+	font-weight: 700;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--main-color);
+	margin-bottom: 10px;
+}
+.advantage__container{
+	justify-content: center;
+	width: 270px;
+	height: 120px;
+	margin-bottom: 30px;
+	background-color: #F5F4FA;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+}
