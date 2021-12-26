@@ -25,6 +25,10 @@ img{
 }
 button{
     cursor: pointer;
+	padding: 0;
+	border: none;
+	color: inherit;
+	background-color: transparent;
 }
 .block{
 	display: block;

@@ -1,10 +1,17 @@
 .element{
 	display: flex;
-	margin-bottom: 50px;
-	justify-content: center;
-	&__item:not(:last-child){
-		margin-right: 8px;
+	flex-wrap: wrap;
+	margin: -4px;
+	margin-bottom: 30px;
+	@media screen and (min-width: 768px) {
+		justify-content: center;
 	}
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
+}
+.element__item{
+	margin: 4px;
 }
 .element__btn {
 	font-weight: 500;

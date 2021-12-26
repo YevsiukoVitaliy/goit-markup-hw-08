@@ -17,11 +17,19 @@
 	</head>
 	<body>
 		<!--Шапка сайта-->
-		<header class="header">
+		<header class="header block">
 			<div class="container header__container">
-				<nav class="nav">
+				<div class="container__logo">
 					<a class="header__logo logo" href="./index.html">Web<span class="logo__black">Studio</span>
 					</a>
+				</div>
+				<button type="button" class="button__open" >
+					<svg class="menu__icon" width="40" height="40">
+						<use href="./images/icons.svg#icon-menu"></use>
+					</svg>
+				</button>
+				<div class="mobile__menu">
+				<nav class="nav">
 					<ul class="nav__list">
 						<li class="nav__item">
 							<a class="nav__link nav__link--current" href="./index.html"
@@ -35,28 +43,50 @@
 						</li>
 					</ul>
 				</nav>
-				<ul class="contaks ">
-					<li class="contaks__item">
-						<a class="contaks__link" href="mailto:info@devstudio.com">
-							<svg class="contaks__icon" width="16" height="12">
-								<use href="./images/icons.svg#icon-envelope"></use>
-							</svg>
-							info@devstudio.com</a>
-					</li>
-					<li class="contaks__item">
-						<a class="contaks__link" href="tel:+380961111111">
-							<svg class="contaks__icon" width="10" height="16">
-								<use href="./images/icons.svg#icon-smartphone"></use>
-							</svg>
-							+38 096 111 11 11</a>
-					</li>
-				</ul>
+				<div>
+					<ul class="contaks ">
+						<li class="contaks__item">
+							<a class="contaks__link" href="mailto:info@devstudio.com">
+								<svg class="contaks__icon icon-envelope">
+									<use href="./images/icons.svg#icon-envelope"></use>
+								</svg>
+								info@devstudio.com</a>
+						</li>
+						<li class="contaks__item">
+							<a class="contaks__link" href="tel:+380961111111">
+								<svg class="contaks__icon icon-smartphone">
+									<use href="./images/icons.svg#icon-smartphone"></use>
+								</svg>
+								+38 096 111 11 11</a>
+						</li>
+					</ul>
+					<ul class="mobile">
+						<li class="mobile__item">
+							<a class="mobile__link" href="">Instagram</a>
+						</li>
+						<li class="mobile__item">
+							<a class="mobile__link" href="">Twitter</a>
+						</li>
+						<li class="mobile__item">
+							<a class="mobile__link" href="">Facebook</a>
+						</li>
+						<li class="mobile__item">
+							<a class="mobile__link" href="">LinkedIn</a>
+						</li>
+					</ul>
+				</div>
+				<button class="button-close" type="button">
+					<svg class="menu__icon" width="40" height="40">
+						<use href="./images/icons.svg#icon-close"></use>
+					</svg>
+				</button>
 			</div>
-		</header>
+			</div>
+		</header> 
 		<!--Секция блок заказа услуги-->
 		<main>
-				<section class=" ">
-					<div class="container order">
+				<section class="order block">
+					<div class="container">
 						<h1 class="order__title">
 							Эффективные решения <br />для вашего бизнеса
 						</h1>
@@ -64,8 +94,8 @@
 					</div>
 				</section>
 				<!--Секция занятия и планирования-->
-				<section class="">
-					<div class="container section section--notpaddingbottom">
+				<section class="section block">
+					<div class="container">
 						<h2 class="visually-hidden">Преимущество</h2>
 					<ul class="advantage">
 						<li class="advantage__item">
@@ -119,25 +149,46 @@
 					</ul>
 					</div>
 				</section>
-				<section class="">
-					<div class="container section">
+				<section class="section  section--notpaddingtop block">
+					<div class="container">
 						<h2 class="section__title">Чем мы занимаемся</h2>
 					<ul class="works">
 						<li class="works__item">
 							<div class="works__container">
-								<img class="" src="./images/develop1.jpg" alt="develop1" width="370" />
+								<picture>
+									<source
+									srcset="./images/imgworks1.jpg 1x, 
+									./images/imgworks1@2x.jpg  2x"
+									media="(min-width:1200px)"
+									>
+									 <img class="command__img" src="./images/imgworks1.jpg" alt=""/>
+								</picture>
 						<p class="works__text">Десктопные приложения</p>
 							</div>
 						</li>
 						<li class="works__item">
 							<div class="works__container">
-								<img class="" src="./images/develop2.jpg" alt="develop2" width="370" />
+								<picture>
+									<source
+									srcset="./images/imgworks2.jpg 1x, 
+									./images/imgworks2@2x.jpg  2x"
+									media="(min-width:1200px)"
+									>
+									 <img class="command__img" src="./images/imgworks2.jpg" alt=""/>
+								</picture>
 						<p class="works__text">Мобильные приложения</p>
 							</div>
 						</li>
 						<li class="works__item">
 							<div class="works__container">
-								<img class="" src="./images/develop3.jpg" alt="develop3" width="370" />
+								<picture>
+									<source
+									srcset="./images/imgworks3.jpg 1x, 
+									./images/imgworks3@2x.jpg  2x"
+									media="(min-width:1200px)"
+									>
+									 <img class="command__img" src="./images/imgworks3.jpg" alt=""/>
+								</picture>
 						<p class="works__text">Дизайнерские решения</p>
 							</div>
 						</li>
@@ -145,12 +196,29 @@
 					</div>
 				</section>
 				<!--Секция команды-->
-				<section class="">
-					<div class="container section section--graybackground">
+				<section class=" section section--graybackground block">
+					<div class="container">
 						<h2 class="section__title">Наша команда</h2>
 					<ul class="command">
 						<li class="command__item">
-							<img class="command__img" src="./images/employee1.jpg"alt="employee1" width="270" />
+							<picture>
+								<source
+								srcset="./images/imgcommand1d.jpg , 
+								./images/imgcommand1d@2x.jpg  2x"
+								media="(min-width:1200px)"
+								>
+								<source
+								srcset="./images/imgcommand1t.jpg 1x ,
+								./images/imgcommand1t@2x.jpg 2x"
+								 media="(min-width:768px)"
+								 >
+								 <source
+								 srcset="./images/imgcommand1.jpg 1x ,
+								 ./images/imgcommand1@2x.jpg 2x"
+								 media="(min-width:320px)"
+								 >
+								 <img class="command__img" src="./images/imgcommand1d.jpg" alt=""/>
+							</picture>
 							<div class="command__container">
 							<h3 class="command__title">Игорь Демьяненко</h3>
 							<p class="command__text">Product Designer</p>
@@ -188,7 +256,24 @@
 						</li>
 							
 						<li class="command__item">
-							<img class="command__img" src="./images/employee4.jpg" alt="employee2" width="270" />
+							<picture>
+								<source
+								srcset="./images/imgcommand2d.jpg , 
+								./images/imgcommand2d@2x.jpg  2x"
+								media="(min-width:1200px)"
+								>
+								<source
+								srcset="./images/imgcommand2t.jpg 1x ,
+								./images/imgcommand2t@2x.jpg 2x"
+								 media="(min-width:768px)"
+								 >
+								 <source
+								 srcset="./images/imgcommand2.jpg 1x ,
+								 ./images/imgcommand2@2x.jpg 2x"
+								 media="(min-width:320px)"
+								 >
+								 <img class="command__img" src="./images/imgcommand2d.jpg" alt=""/>
+							</picture>
 							<div class="command__container">
 							<h3 class="command__title">Ольга Репина</h3>
 							<p class="command__text">Frontend Developer</p>
@@ -226,7 +311,24 @@
 						</li>
 							
 						<li class="command__item">
-							<img class="command__img" src="./images/employee3.jpg" alt="employee3" width="270" />
+							<picture>
+								<source
+								srcset="./images/imgcommand3d.jpg , 
+								./images/imgcommand3d@2x.jpg  2x"
+								media="(min-width:1200px)"
+								>
+								<source
+								srcset="./images/imgcommand3t.jpg 1x ,
+								./images/imgcommand3t@2x.jpg 2x"
+								 media="(min-width:768px)"
+								 >
+								 <source
+								 srcset="./images/imgcommand3.jpg 1x ,
+								 ./images/imgcommand3@2x.jpg 2x"
+								 media="(min-width:320px)"
+								 >
+								 <img class="command__img" src="./images/imgcommand3d.jpg" alt=""/>
+							</picture>
 							<div class="command__container">
 							<h3 class="command__title">Николай Тара</h3>
 							<p class="command__text">Marketing</p>
@@ -264,7 +366,24 @@
 						</li>
 							
 						<li class="command__item">
-							<img class="command__img" src="./images/employee2.jpg" alt="employee4" width="270" />
+							<picture>
+								<source
+								srcset="./images/imgcommand4d.jpg , 
+								./images/imgcommand4d@2x.jpg  2x"
+								media="(min-width:1200px)"
+								>
+								<source
+								srcset="./images/imgcommand4t.jpg 1x ,
+								./images/imgcommand4t@2x.jpg 2x"
+								 media="(min-width:768px)"
+								 >
+								 <source
+								 srcset="./images/imgcommand4.jpg 1x ,
+								 ./images/imgcommand4@2x.jpg 2x"
+								 media="(min-width:320px)"
+								 >
+								 <img class="command__img" src="./images/imgcommand4d.jpg" alt=""/>
+							</picture>
 							<div class="command__container">
 							<h3 class="command__title">Михаил Ермаков</h3>
 							<p class="command__text">UI Designer</p>
@@ -304,10 +423,10 @@
 					</ul>
 					</div>
 				</section>
-				<section class="section">
-					<div class="container section">
+				<section class="section block">
+					<div class="container">
 						<h2 class="section__title">Постоянные клиенты</h2>
-						<ul class="clients__list">
+						<ul class="clients">
 							<li class="clients__item">
 								<a class="clients__link" href="">
 									<svg class="clients__icon" width="106" height="60">
@@ -355,8 +474,8 @@
 				</section>
 		</main>
 		<!--Подвал сайта-->
-		<footer class="">
-			<div class="container footer footer__container">
+		<footer class="footer block">
+			<div class="container footer__container">
 				<address class="footer__address">
 					<ul class="">
 						<li class="footer__item">
@@ -470,7 +589,7 @@
 								<use href="./images/icons.svg#icon-check"></use>
 							</svg>
 						</span>
-						<p>Соглашаюсь с рассылкой и принимаю <a class="link__policy" href="#"> Условия договора</a></p>
+						<p class="modal__text">Соглашаюсь с рассылкой и принимаю <a class="link__policy" href="#"> Условия договора</a></p>
 					</label>
 					</div>
 					<button type="submit" class="form__button">Отправить</button>
