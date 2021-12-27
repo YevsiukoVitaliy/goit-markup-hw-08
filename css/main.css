@@ -995,7 +995,6 @@ button {
 }
 
 .clients__item {
-  height: 92px;
   margin: 15px;
   -ms-flex-preferred-size: calc((100% - 60px) / 2);
       flex-basis: calc((100% - 60px) / 2);
@@ -1025,6 +1024,7 @@ button {
           align-items: center;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+  height: 92px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
