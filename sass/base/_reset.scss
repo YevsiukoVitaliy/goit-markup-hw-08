@@ -5,6 +5,9 @@ body {
 	line-height: 1.71;
 	background: #FFFFFF;
 }
+body.modal-open{
+	overflow: hidden;
+}
 :hover,:focus{
 	outline: none;
 }
@@ -29,16 +32,4 @@ button{
 	border: none;
 	color: inherit;
 	background-color: transparent;
-}
-.block{
-	display: block;
-}
-section {
-	display: none;
-}
-header {
-	display: none;
-}
-footer {
-	display: none;
 }
