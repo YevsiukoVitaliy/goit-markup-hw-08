@@ -19,9 +19,9 @@
 .network__icon{
 	fill: #FFFFFF;
 }
-.footer__address{
+.footer__container--adress{
 	letter-spacing: 0.03em;
-	@media screen and (max-width: 1199px) {
+	@media screen and (max-width: 767px) {
 		margin-bottom: 60px;
 	}
 	@media screen and (min-width: 1200px) {
@@ -103,9 +103,6 @@ margin-bottom: 20px;
 	}
 }
 .network{
-	@media screen and (max-width: 1199px) {
-		margin-bottom: 60px;
-	}
 	@media screen and (min-width: 1200px) {
 		margin-left: 70px;
 	}
@@ -139,6 +136,9 @@ margin-bottom: 20px;
 	}
 }
 .mailing{
+	@media screen and (max-width: 1199px) {
+		margin-top: 60px;
+	}
 	@media screen and (min-width: 1200px) {
 		margin-left: auto;
 	}

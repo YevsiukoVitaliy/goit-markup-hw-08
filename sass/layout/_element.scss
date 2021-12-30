@@ -1,7 +1,6 @@
 .element{
 	display: flex;
 	flex-wrap: wrap;
-	margin: -4px;
 	margin-bottom: 30px;
 	@media screen and (min-width: 768px) {
 		justify-content: center;
@@ -11,7 +10,17 @@
 	}
 }
 .element__item{
-	margin: 4px;
+	&:not(:last-child){
+		margin-right: 4px;
+		@media screen and (min-width: 768px) {
+			margin-right: 8px;			
+		}
+	}
+	&:not(:nth-last-child(-n+2)){
+		@media screen and (max-width: 767px) {
+			margin-bottom: 15px;			
+		}
+	}
 }
 .element__btn {
 	font-weight: 500;
@@ -24,6 +33,7 @@
 	border-radius: 4px;
 	border: none;
 	padding: 6px 22px;
+	color: #212121;
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	&:focus,
 	&:hover {
