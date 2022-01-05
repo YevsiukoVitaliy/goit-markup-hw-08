@@ -42,6 +42,7 @@ button {
 }
 
 .backdrop {
+  overflow: auto;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
@@ -74,6 +75,11 @@ button {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+}
+@media screen and (max-height: 609px) {
+  .modal {
+    margin: 200px 0;
+  }
 }
 @media screen and (min-width: 480px) {
   .modal {
@@ -1176,12 +1182,12 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-  .nav__item:not(:last-child) {
+  .nav__item {
     margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 768px) {
-  .nav__item:not(:last-child) {
+  .nav__item {
     margin-right: 50px;
   }
 }
@@ -1329,6 +1335,7 @@ button {
             justify-content: space-between;
     width: 100vw;
     height: 100vh;
+    overflow: auto;
     padding: 48px 40px;
     background-color: #FFFFFF;
     -webkit-transform: translateX(100%) scale(-1) translateY(-100%);
